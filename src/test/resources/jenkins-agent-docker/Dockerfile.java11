@@ -1,5 +1,5 @@
 # WARNING: Change JAVA_HOME accordingly on version change
-FROM openjdk:11-slim
+FROM openjdk:11-ea-28-jdk
 
 ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
