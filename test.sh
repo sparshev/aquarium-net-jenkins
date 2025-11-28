@@ -5,8 +5,8 @@ aquarium_fish_version=$(mvn --batch-mode help:evaluate -Dexpression=aquarium-fis
 
 if [ ! -f "aquarium-fish-java-shaded-${aquarium_fish_version}.jar" ]; then
     echo 'Download and install release artifact from github'
-    curl -sLo "aquarium-fish-java-shaded-${aquarium_fish_version}.jar" "https://github.com/adobe/aquarium-fish/releases/download/v${aquarium_fish_version}/aquarium-fish-java-${aquarium_fish_version}-shaded.jar"
-    mvn --batch-mode install:install-file -Dfile=aquarium-fish-java-shaded-${aquarium_fish_version}.jar -DgroupId=com.adobe.ci.aquarium -DartifactId=aquarium-fish-java -Dversion=${aquarium_fish_version} -Dclassifier=shaded -Dpackaging=jar
+    curl -sLo "aquarium-fish-java-shaded-${aquarium_fish_version}.jar" "https://github.com/sparshev/aquarium-fish/releases/download/v${aquarium_fish_version}/aquarium-fish-java-${aquarium_fish_version}-shaded.jar"
+    mvn --batch-mode install:install-file -Dfile=aquarium-fish-java-shaded-${aquarium_fish_version}.jar -DgroupId=ci.aquarium -DartifactId=aquarium-fish-java -Dversion=${aquarium_fish_version} -Dclassifier=shaded -Dpackaging=jar
 fi
 
 os_name=$(uname -s)
@@ -26,7 +26,7 @@ if [ -d ../aquarium-fish ]; then
     ln -s $(ls -t ../aquarium-fish/aquarium-fish-*.${os_name}_$(uname -m) | head -1) aquarium-fish
 else
     echo "Download aquarium-fish v${aquarium_fish_version} from release for integration tests"
-    curl -sLo aquarium-fish.tar.xz https://github.com/adobe/aquarium-fish/releases/download/v${aquarium_fish_version}/aquarium-fish-v${aquarium_fish_version}.${os_name}_$(uname -m).tar.xz
+    curl -sLo aquarium-fish.tar.xz https://github.com/sparshev/aquarium-fish/releases/download/v${aquarium_fish_version}/aquarium-fish-v${aquarium_fish_version}.${os_name}_$(uname -m).tar.xz
     tar xf aquarium-fish.tar.xz
 fi
 
