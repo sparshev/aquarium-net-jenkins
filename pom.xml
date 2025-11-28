@@ -9,13 +9,13 @@
         <relativePath />
     </parent>
 
-    <groupId>com.adobe.ci.aquarium</groupId>
+    <groupId>ci.aquarium</groupId>
     <artifactId>aquarium-net-jenkins</artifactId>
     <version>dev-SNAPSHOT</version><!-- Replaced during release from git tag -->
     <packaging>hpi</packaging>
     <name>Aquarium Net Jenkins Plugin</name>
     <description>Dynamically allocates required resources from Aquarium Fish cluster nodes</description>
-    <url>https://github.com/adobe/aquarium-net-jenkins/</url>
+    <url>https://github.com/sparshev/aquarium-net-jenkins/</url>
 
     <developers>
         <developer>
@@ -61,7 +61,7 @@
         <maven.test.redirectTestOutputToFile>false</maven.test.redirectTestOutputToFile>
 
         <!-- Aquarium-Fish pregenerated proto -->
-        <aquarium-fish-java.version>0.10.1</aquarium-fish-java.version>
+        <aquarium-fish-java.version>0.10.3</aquarium-fish-java.version>
     </properties>
 
     <profiles>
@@ -117,7 +117,7 @@
 
         <!-- Aquarium-Fish Proto Library, using shaded version to run on older jenkins pipeline plugins with guava < 31 -->
         <dependency>
-            <groupId>com.adobe.ci.aquarium</groupId>
+            <groupId>ci.aquarium</groupId>
             <artifactId>aquarium-fish-java</artifactId>
             <classifier>shaded</classifier>
             <version>${aquarium-fish-java.version}</version>

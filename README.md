@@ -1,9 +1,15 @@
-# [Aquarium Net Jenkins](https://github.com/adobe/aquarium-net-jenkins)
+# [Aquarium Net Jenkins](https://github.com/sparshev/aquarium-net-jenkins)
 
-[![CI](https://github.com/adobe/aquarium-net-jenkins/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/adobe/aquarium-net-jenkins/actions/workflows/main.yml)
+[![CI](https://github.com/sparshev/aquarium-net-jenkins/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/sparshev/aquarium-net-jenkins/actions/workflows/main.yml)
 
-[Aquarium](https://github.com/adobe/aquarium-fish/wiki/Aquarium) resources manager jenkins plugin
+[Aquarium](https://github.com/sparshev/aquarium-fish/wiki/Aquarium) resources manager jenkins plugin
 to allocate the required resources on demand.
+
+## Fork
+
+This fork was done because I left Adobe and lost admin access to the [original repository](https://github.com/adobe/aquarium-net-jenkins).
+So as original author I continue to maintain & develop the project separately to ensure it works
+stable and without issues.
 
 ## Requirements
 
