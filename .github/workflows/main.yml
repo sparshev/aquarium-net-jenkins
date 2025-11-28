@@ -54,7 +54,7 @@ jobs:
 
       - name: Download and install release artifact from github
         run: |
-          curl -sLo aquarium-fish-java-shaded.jar https://github.com/aquarium/aquarium-fish/releases/download/v${{ steps.extract_version.outputs.java_version }}/aquarium-fish-java-${{ steps.extract_version.outputs.java_version }}-shaded.jar
+          curl -sLo aquarium-fish-java-shaded.jar https://github.com/sparshev/aquarium-fish/releases/download/v${{ steps.extract_version.outputs.java_version }}/aquarium-fish-java-${{ steps.extract_version.outputs.java_version }}-shaded.jar
           mvn --batch-mode install:install-file -Dfile=aquarium-fish-java-shaded.jar -DgroupId=ci.aquarium -DartifactId=aquarium-fish-java -Dversion=${{ steps.extract_version.outputs.java_version }} -Dclassifier=shaded -Dpackaging=jar
 
       - name: Set version from the closest git tag
@@ -88,12 +88,12 @@ jobs:
 
       - name: Download and install release artifact from github
         run: |
-          curl -sLo aquarium-fish-java-shaded.jar https://github.com/aquarium/aquarium-fish/releases/download/v${{ steps.extract_version.outputs.java_version }}/aquarium-fish-java-${{ steps.extract_version.outputs.java_version }}-shaded.jar
+          curl -sLo aquarium-fish-java-shaded.jar https://github.com/sparshev/aquarium-fish/releases/download/v${{ steps.extract_version.outputs.java_version }}/aquarium-fish-java-${{ steps.extract_version.outputs.java_version }}-shaded.jar
           mvn --batch-mode install:install-file -Dfile=aquarium-fish-java-shaded.jar -DgroupId=ci.aquarium -DartifactId=aquarium-fish-java -Dversion=${{ steps.extract_version.outputs.java_version }} -Dclassifier=shaded -Dpackaging=jar
 
       - name: Download dependencies for integration tests
         run: |
-          curl -sLo aquarium-fish.tar.xz https://github.com/aquarium/aquarium-fish/releases/download/v${{ steps.extract_version.outputs.java_version }}/aquarium-fish-v${{ steps.extract_version.outputs.java_version }}.linux_amd64.tar.xz
+          curl -sLo aquarium-fish.tar.xz https://github.com/sparshev/aquarium-fish/releases/download/v${{ steps.extract_version.outputs.java_version }}/aquarium-fish-v${{ steps.extract_version.outputs.java_version }}.linux_amd64.tar.xz
           tar xf aquarium-fish.tar.xz
 
       - name: Configuring system for tests execution
